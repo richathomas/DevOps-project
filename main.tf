@@ -5,8 +5,7 @@ resource "aws_vpc" "my_vpc" {
 cidr_block = "10.0.0.0/16"
 tags = {
 Name = "my-vpc"
-}
-}
+} }
 resource "aws_subnet" "my_subnet" {
 count = 2
 vpc_id = aws_vpc.my_vpc.id
